@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj": {}
+    "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj": {
+    "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj",
+        "projectUniqueName": "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj",
         "projectName": "datastructures",
-        "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj",
+        "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj",
         "packagesPath": "C:\\Users\\sozon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\obj\\",
+        "outputPath": "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sozon\\AppData\\Roaming\\NuGet\\NuGet.Config",

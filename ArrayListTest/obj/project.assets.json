@@ -4649,11 +4649,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sozon\\source\\repos\\datastructures\\ArrayListTest\\datastructures.test.csproj",
+      "projectUniqueName": "C:\\Users\\sozon\\source\\repos\\datastructures1\\ArrayListTest\\datastructures.test.csproj",
       "projectName": "datastructures.test",
-      "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures\\ArrayListTest\\datastructures.test.csproj",
+      "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures1\\ArrayListTest\\datastructures.test.csproj",
       "packagesPath": "C:\\Users\\sozon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sozon\\source\\repos\\datastructures\\ArrayListTest\\obj\\",
+      "outputPath": "C:\\Users\\sozon\\source\\repos\\datastructures1\\ArrayListTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sozon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4669,8 +4669,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj": {
-              "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures\\datastructures\\datastructures.csproj"
+            "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj": {
+              "projectPath": "C:\\Users\\sozon\\source\\repos\\datastructures1\\datastructures\\datastructures.csproj"
             }
           }
         }
