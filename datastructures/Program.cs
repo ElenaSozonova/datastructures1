@@ -7,15 +7,21 @@ namespace datastructures
         static void Main(string[] args)
         {
             LinkedList L = new LinkedList();
-            L.AddToEnd(1);
+            L.AddToEnd(7);
             Vivod(L.ReturnArray());
-            L.AddToEnd(2);
+            L.AddToEnd(6);
             Vivod(L.ReturnArray());
-            L.AddToEnd(3);
+            L.AddToEnd(5);
             Vivod(L.ReturnArray());
-            L.AddToStart(0);
+            L.AddToStart(8);
             Vivod(L.ReturnArray());
-            L.AddToIndex(9, 1);
+            L.AddByIndex(9, 3);
+            Vivod(L.ReturnArray());
+            L.DeleteFromStart();
+            Vivod(L.ReturnArray());
+            L.DeleteFromEnd();
+            Vivod(L.ReturnArray());
+            L.DeleteByIndex(2);
             Vivod(L.ReturnArray());
         }
 

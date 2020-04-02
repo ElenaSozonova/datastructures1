@@ -4,7 +4,7 @@ using System.Text;
 
 namespace datastructures
 {
-    public class LinkedList
+    public class LinkedList 
     {
         private Node root; // хр ссылка на первый элемент 
 
@@ -22,7 +22,7 @@ namespace datastructures
             Lenght = 1;
         }
 
-        public void AddToEnd(int a) //доб в конец 
+        public void AddToEnd(int a) //доб в конец  1 элемента 
         {
             if (Lenght == 0)//(root==null)
             {
@@ -63,7 +63,7 @@ namespace datastructures
             return array;
         }
 
-        public void AddToStart(int a) //доб в начало 
+        public void AddToStart(int a) //доб в начало  1 элемента 
         {
             Node tmp = new Node(a); //созд новую ноду 
             tmp.Next = root; // она ссылается на знач, кот лежит в root 
@@ -71,9 +71,69 @@ namespace datastructures
             Lenght++; //увел длину 
         }
 
-        public void AddToIndex(int a, int index)
+        public void AddByIndex(int a, int index) //добавление по индексу 1 элемента
         {
-            
+            Node tmp = new Node(a);
+            Node following = root; //доп переменная - хранит 1ый элемент списка, потом будем шагать 
+
+            if (Lenght == 0)// если длина = 0
+            {
+                root = new Node(a); //первый элемент = новой ноде
+                Lenght = 1; //длина = 1
+            }
+            else
+            {
+                for (int i = 0; i < index - 1; i++) //от 0 до index-1 шагаем
+                {
+
+                    following = following.Next; // доп.переменная=ссылке на след.объект
+
+                }
+                tmp.Next = following.Next; //приравниваем ссылку на объект с нужным индексом 
+                following.Next = tmp;
+                Lenght++;
+            }
         }
+
+        public void DeleteFromStart() //удаление из начала 1 элемента
+        {
+            Node tmp = root;
+            tmp = tmp.Next;
+            root = tmp;
+            Lenght--; 
+        }
+
+        public void DeleteFromEnd() //удаление из конца
+        {
+            Node tmp = root;
+            for (int i = 0; i < Lenght - 2; i++)
+            {
+                tmp = tmp.Next;
+            }
+            tmp.Next = null;
+            Lenght--;
+        }
+
+        public void DeleteByIndex(int index) //удаление по индексу 
+        {
+            if (index == 0)
+            {
+                DeleteFromStart();
+            }
+            else
+            {
+                Node following = root;
+
+                for (int i = 0; i < index - 1; i++)
+                {
+                    following = following.Next;
+                }
+                following.Next = following.Next.Next;
+                Lenght--;
+            }
+        }
+
+
+
     }
 }
