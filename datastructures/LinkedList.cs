@@ -156,13 +156,156 @@ namespace datastructures
             }
         }
 
-        public void SortUp ()
+        public void SortUp () //сортировка по возрастанию 
         {
-           
+            for (int i = 0; i < Lenght; i++)
+            {
+                Node tmp = root; //присваиваем tmp root 
+                for (int j = 1; j < Lenght; j++)
+                {
 
+                    if (tmp.Value > tmp.Next.Value) //если значение лежащее в рут больше, чем значению, лежащее в следующей ноде
+                    {
+                        int tmp1 = tmp.Next.Value; //"кладем" в tmp1 значение след ноды
+                        tmp.Next.Value = tmp.Value; // значению след ноды присваиваем значение предыдущей
+                        tmp.Value = tmp1; //на место следующей кладем предыдущую 
+                    }
+                    tmp = tmp.Next; // переходим на следующую ноду 
+                }  
+            }
+        }
+        public void SortDown() //сортировка по убыванию 
+        {
+            for (int i = 0; i < Lenght; i++)
+            {
+                Node tmp = root; //присваиваем tmp root 
+                for (int j = 1; j < Lenght; j++)
+                {
+
+                    if (tmp.Value < tmp.Next.Value) //если значение лежащее в рут меньше, чем значению, лежащее в следующей ноде
+                    {
+                        int tmp1 = tmp.Next.Value; //"кладем" в tmp1 значение след ноды
+                        tmp.Next.Value = tmp.Value; // значению след ноды присваиваем значение предыдущей
+                        tmp.Value = tmp1; //на место следующей кладем предыдущую 
+                    }
+                    tmp = tmp.Next; // переходим на следующую ноду 
+                }
+            }
         }
 
+        public int SearchMax() //поиск максимума 
+        {
+            Node tmp = root; // во врем переменную кладем root
+            int max = tmp.Value; //в максимум кладем значение tmp
 
+           while (tmp.Next!=null) //пока ссылка куда-нибудь ведёт
+           { 
+                if (max < tmp.Next.Value) // если max> значение в след ноде
+                {
+                    max = tmp.Next.Value; //присваиваем максимуму значение след ноды
+                }
+                tmp = tmp.Next; //переходим к след ноде
+           }
+            return max; // возвращаем максимум 
+        }
+        public int SearchMin() //поиск минимума
+        {
+            Node tmp = root; 
+            int min = tmp.Value; 
 
+            while (tmp.Next != null)
+            {
+                if (min > tmp.Next.Value) 
+                {
+                    min = tmp.Next.Value; 
+                }
+                tmp = tmp.Next; 
+            }
+            return min; 
+        }
+
+        public int MaxIndex() //индекс максимума
+        {
+            Node tmp = root;
+            int max = tmp.Value;
+            int maxIndex=0;
+            int count = 0;
+
+            while (tmp.Next != null)
+            {
+                count++;
+                if (max < tmp.Next.Value)
+                {
+                    max = tmp.Next.Value;
+                    maxIndex = count;
+                }
+                tmp = tmp.Next; 
+            }
+            return maxIndex;
+        }
+
+        public int MinIndex() //индекс мин 
+        {
+            Node tmp = root;
+            int min = tmp.Value;
+            int minIndex = 0;
+            int count = 0;
+
+            while (tmp.Next != null)
+            {
+                count++;
+                if (min > tmp.Next.Value)
+                {
+                    min = tmp.Next.Value;
+                    minIndex = count;
+                }
+                tmp = tmp.Next;
+            }
+            return minIndex;
+        }
+
+        public int IndexByNumber(int number) //индекс по значению
+        {   
+           Node tmp = root;
+           
+           int index = 0; ;
+
+            for (int i = 0; i < Lenght; i++)
+            {
+                if (tmp.Value == number)
+                {
+                    index = i;
+                }
+                tmp = tmp.Next;
+            }
+            return index;
+        }
+
+        public void СhangeByIndex(int index, int number) //изменить по индексу 
+        {
+            Node tmp = root;
+
+            for (int i=0; i<index;i++)
+            {
+                tmp = tmp.Next;
+            }
+            tmp.Value = number;
+        }
+
+        public void DeleteFromNumber(int number)
+        {
+            Node tmp = root;
+            Node previous = null;
+
+            for (int i = 0; i < Lenght; i++)
+            {
+                if (tmp.Value == number)
+                {
+                    tmp.Next = tmp.Next.Next;
+                }
+                tmp = tmp.Next;
+            }
+            Lenght--;
+        }
     }
 }

@@ -11,11 +11,11 @@ namespace datastructures
             Vivod(L.ReturnArray());
             L.AddToEnd(6);
             Vivod(L.ReturnArray());
-            L.AddToEnd(5);
+            L.AddToEnd(12);
             Vivod(L.ReturnArray());
-            L.AddToStart(8);
+            L.AddToStart(5);
             Vivod(L.ReturnArray());
-            L.AddByIndex(9, 3);
+            L.AddByIndex(1, 3);
             Vivod(L.ReturnArray());
             //L.DeleteFromStart();
             //Vivod(L.ReturnArray());
@@ -23,8 +23,22 @@ namespace datastructures
             //Vivod(L.ReturnArray());
             //L.DeleteByIndex(2);
             //Vivod(L.ReturnArray());
-            L.Reverse();
+            //L.Reverse();
+            //Vivod(L.ReturnArray());
+            //L.SortUp();
+            //Vivod(L.ReturnArray());
+            //L.SortDown();
+            //Vivod(L.ReturnArray());
+            //Console.WriteLine(L.SearchMax());
+            //Console.WriteLine(L.MaxIndex());
+            //Console.WriteLine(L.SearchMin());
+            //Console.WriteLine(L.MinIndex());
+            //Console.WriteLine(L.IndexByNumber(5));
+            //L.СhangeByIndex(4, 11);
+            //Vivod(L.ReturnArray());
+            L.DeleteFromNumber(12);
             Vivod(L.ReturnArray());
+
         }
 
         static void Vivod(int[] a)
