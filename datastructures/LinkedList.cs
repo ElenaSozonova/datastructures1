@@ -302,6 +302,17 @@ namespace datastructures
             return Lenght;
         }
 
+        public int IndexAccess(int index) //доступ по индексу 
+        {
+            Node tmp = root;
+            int number;
 
+            for (int i = 0; i < index; i++)
+            {
+                tmp = tmp.Next;
+            }
+            number = tmp.Value;
+            return number;
+        }
     }
 }
