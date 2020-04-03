@@ -22,6 +22,15 @@ namespace datastructures
             Lenght = 1;
         }
 
+        public LinkedList(int [] a) 
+        {
+          int[] array = a;
+          for (int i = 0; i < array.Length - 1; i++)
+            {
+                AddToEnd(a[i]);
+            }
+        }
+
         public void AddToEnd(int a) //доб в конец  1 элемента 
         {
             if (Lenght == 0)//(root==null)
@@ -132,6 +141,23 @@ namespace datastructures
                 Lenght--;
             }
         }
+
+        public void Reverse()
+        {
+            Node start = root;
+            Node previous = null;
+            Node next = null;
+
+            while (start.Next != null)
+            {
+                next = start.Next;
+                start.Next = previous;
+                previous = start;
+                start = next;
+            }
+        }
+
+
 
 
 

@@ -116,6 +116,7 @@ namespace datastructures.test
         }
 
         [TestCase(new int[] { 4, 2, 8 }, ExpectedResult = new int[] { 8, 2, 4 })]
+        [TestCase(new int[] { 4, 2, 8, 5, 6 }, ExpectedResult = new int[] { 6, 5, 8, 2, 4 })]
         [TestCase(new int[] { 1, 2, 3, 4 }, ExpectedResult = new int[] { 4, 3, 2, 1 })]
         [TestCase(new int[] { 0, 0, 0 }, ExpectedResult = new int[] { 0, 0, 0 })]
         [TestCase(new int[] { }, ExpectedResult = new int[] { })]

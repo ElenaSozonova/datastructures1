@@ -17,11 +17,13 @@ namespace datastructures
             Vivod(L.ReturnArray());
             L.AddByIndex(9, 3);
             Vivod(L.ReturnArray());
-            L.DeleteFromStart();
-            Vivod(L.ReturnArray());
-            L.DeleteFromEnd();
-            Vivod(L.ReturnArray());
-            L.DeleteByIndex(2);
+            //L.DeleteFromStart();
+            //Vivod(L.ReturnArray());
+            //L.DeleteFromEnd();
+            //Vivod(L.ReturnArray());
+            //L.DeleteByIndex(2);
+            //Vivod(L.ReturnArray());
+            L.Reverse();
             Vivod(L.ReturnArray());
         }
 
