@@ -10,19 +10,19 @@ namespace datastructures
 
         public int Lenght { get; private set; }
 
-        public LinkedList()
+        public LinkedList() // созд пустого объекта
         {
             root = null;
             Lenght = 0;
         }
 
-        public LinkedList(int a)
+        public LinkedList(int a) // созд объекта на основе переменной 
         {
             root = new Node(a);
             Lenght = 1;
         }
 
-        public LinkedList(int [] a) 
+        public LinkedList(int [] a) // созд объекта на основе массива 
         {
           int[] array = a;
           for (int i = 0; i < array.Length - 1; i++)
@@ -137,26 +137,30 @@ namespace datastructures
                 {
                     following = following.Next;
                 }
-                following.Next = following.Next.Next;
+                following.Next = following.Next.Next; //переставляем ссылки
                 Lenght--;
             }
         }
 
-        public void Reverse()
+        public void Reverse() //реверс
         {
             Node tmproot = root;
-            Node tmp = null;
+            Node tmp;
 
-            //while (tmproot.Next != null)
-            //{
-               
-            //root = tmproot.Next;
-           
-
-            //}
+            while (tmproot.Next != null) //пока ссылка на след переменную не равна null
+            {
+                tmp = tmproot.Next; // 'кладем' в tmp след переменную 
+                tmproot.Next = tmproot.Next.Next; //'меняем' ссылки: след на через 1
+                tmp.Next = root; // ??? 
+                root = tmp; //в рут "кладем" запомненную tmp 
+            }
         }
 
+        public void SortUp ()
+        {
+           
 
+        }
 
 
 
