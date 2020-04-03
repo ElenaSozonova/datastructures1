@@ -146,12 +146,14 @@ namespace datastructures
         {
             Node tmproot = root;
             Node tmp = null;
+
+            //while (tmproot.Next != null)
+            //{
+               
+            //root = tmproot.Next;
            
-            while (tmproot.Next!= null)
-            {
-                tmp = tmproot.Next;
-                tmproot.Next
-            }
+
+            //}
         }
 
 
