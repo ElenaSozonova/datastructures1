@@ -8,7 +8,7 @@ namespace datastructures
     {
         private Node root; // хр ссылка на первый элемент 
 
-        public int Lenght { get; private set; }
+        public int Lenght { get; private set; } //
 
         public LinkedList() // созд пустого объекта
         {
@@ -268,7 +268,7 @@ namespace datastructures
         {   
            Node tmp = root;
            
-           int index = 0; ;
+           int index = 0; 
 
             for (int i = 0; i < Lenght; i++)
             {
@@ -294,18 +294,14 @@ namespace datastructures
 
         public void DeleteFromNumber(int number)
         {
-            Node tmp = root;
-            Node previous = null;
-
-            for (int i = 0; i < Lenght; i++)
-            {
-                if (tmp.Value == number)
-                {
-                    tmp.Next = tmp.Next.Next;
-                }
-                tmp = tmp.Next;
-            }
-            Lenght--;
+            DeleteByIndex(IndexByNumber(number));
         }
+
+        public int ReturnLength() //возвращение длины 
+        {
+            return Lenght;
+        }
+
+
     }
 }

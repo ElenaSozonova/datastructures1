@@ -36,9 +36,9 @@ namespace datastructures
             //Console.WriteLine(L.IndexByNumber(5));
             //L.СhangeByIndex(4, 11);
             //Vivod(L.ReturnArray());
-            L.DeleteFromNumber(12);
-            Vivod(L.ReturnArray());
-
+            //L.DeleteFromNumber(5);
+            //Vivod(L.ReturnArray());
+            //Console.WriteLine(L.ReturnLength());
         }
 
         static void Vivod(int[] a)
