@@ -144,16 +144,13 @@ namespace datastructures
 
         public void Reverse()
         {
-            Node start = root;
-            Node previous = null;
-            Node next = null;
-
-            while (start.Next != null)
+            Node tmproot = root;
+            Node tmp = null;
+           
+            while (tmproot.Next!= null)
             {
-                next = start.Next;
-                start.Next = previous;
-                previous = start;
-                start = next;
+                tmp = tmproot.Next;
+                tmproot.Next
             }
         }
 
